@@ -28,7 +28,7 @@
           >
           <ul class="list navi">
             <li class="navi-item">
-              <a class="link" href="./index.html">Студия</a>
+              <a class="link current-page" href="./index.html">Студия</a>
             </li>
             <li class="navi-item">
               <a class="link" href="./portfolio.html">Портфолио</a>
@@ -63,7 +63,9 @@
       <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-          <button class="btn" type="button">Заказать услугу</button>
+          <button class="btn" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Секція про наші бізнес якості -->
@@ -128,28 +130,37 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list flexbox">
             <li class="port-card-flex">
-              <img
-                src="./images/img-1.jpg"
-                width="370"
-                height="294"
-                alt="Програмист пишет код"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img-1.jpg"
+                  width="370"
+                  height="294"
+                  alt="Програмист пишет код"
+                />
+                <p class="qua-title">Десктопные приложения</p>
+              </div>
             </li>
             <li class="port-card-flex">
-              <img
-                src="./images/img-2.jpg"
-                width="370"
-                height="294"
-                alt="Програмист создает приложение для телефона"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img-2.jpg"
+                  width="370"
+                  height="294"
+                  alt="Програмист создает приложение для телефона"
+                />
+                <p class="qua-title">Мобильные приложения</p>
+              </div>
             </li>
             <li class="port-card-flex">
-              <img
-                src="./images/img-3.jpg"
-                width="370"
-                height="294"
-                alt="Палитра цветов на екране планшета"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img-3.jpg"
+                  width="370"
+                  height="294"
+                  alt="Палитра цветов на екране планшета"
+                />
+                <p class="qua-title">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -569,5 +580,22 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn-close" data-modal-close>
+          <svg width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Title</p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+          ipsum inventore voluptatibus ducimus accusantium porro dolorem odio
+          consequatur autem nobis earum voluptatem error ratione suscipit vero
+          numquam, quos culpa. Itaque.
+        </p>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
